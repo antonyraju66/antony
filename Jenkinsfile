@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building the code using Maven."
+                echo "Building the code using Mavencxcx."
+                echo "Building the code using Mavencxcx."
             }
         }
         stage('Unit and Integration Tests') {
