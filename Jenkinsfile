@@ -14,6 +14,7 @@ pipeline {
         stage('Code Analysis') {
             steps {
                 echo "Analyzing code using the CodeScene."
+echo "Analyzing code using the CodeScene."
             }
         }
         stage('Security Scan') {
