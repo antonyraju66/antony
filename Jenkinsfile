@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo "Building the code using Mavencsdsdxcx."
                 echo "Building the code using Mavencxcx."
+                echo "Building the code using Mavencxcx."
             }
         }
         stage('Unit and Integration Tests') {
