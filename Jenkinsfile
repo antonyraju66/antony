@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Unit and Integration Tests') {
             steps {
-                echo 'Performing unit and integration testings using the Citrus and the Selenium.'
+                echo 'Performing unit and integration testings using both the Citrus and the Selenium.'
             }
             post {
                 success {
