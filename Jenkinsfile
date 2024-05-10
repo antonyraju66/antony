@@ -68,22 +68,6 @@ pipeline {
             steps {
                 echo 'Deploying the application to Amazon Web Service EC2 production instance.'
             }
-            post {
-                success {
-                    emailext attachLog: true,
-                        subject: 'Deployment Success for Build #${BUILD_NUMBER}',
-                        from: 'antonyr1r2@gmail.com',
-                        body: 'The Build #${BUILD_NUMBER} has been deployed to Amazon Web Service EC2 production instance',
-                        to: 'antonyr1r2@gmail.com'
-                }
-                failure {
-                    emailext attachLog: true,
-                        subject: 'Deployment Failed for Build #${BUILD_NUMBER}',
-                        from: 'antonyr1r2@gmail.com',
-                        body: 'The Build #${BUILD_NUMBER} has been failed in Deployment',
-                        to: 'antonyr1r2@gmail.com'
-                }
-            }
         }
     }
 }
