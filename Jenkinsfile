@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the code using Maven.'
+                echo 'Building the pipeline using a build automation tool called Maven.'
             }
         }
         stage('Unit and Integration Tests') {
             steps {
-                echo 'Running unit and integration testings using the Citrus and Selenium.'
+                echo 'Performing unit and integration testings using the Citrus and the Selenium.'
             }
             post {
                 success {
@@ -29,8 +29,7 @@ pipeline {
         }
         stage('Code Analysis') {
             steps {
-                echo 'Analyzing code using the CodeScene.'
-                echo 'Analyzing code using the CodeScene.'
+                echo 'Analysis of code is performed using the CodeScene.'
             }
         }
         stage('Security Scan') {
@@ -54,19 +53,19 @@ pipeline {
                 }
             }
         }
-        stage('Deploy to Staging') {
+        stage('Deployment to Staging') {
             steps {
-                echo 'Deploying the application to Amazon Web Service EC2 staging instance.'
+                echo 'Deployment of the Pipleline to Amazon Web Service EC2 staging instance.'
             }
         }
-        stage('Integration Tests on Staging') {
+        stage('Integration Testing on Staging') {
             steps {
-                echo 'Running the integration tests in the staging environment.'
+                echo 'Running the integration testings in the staging environment.'
             }
         }
-        stage('Deploy to Production') {
+        stage('Deployment to Production') {
             steps {
-                echo 'Deploying the application to Amazon Web Service EC2 production instance.'
+                echo 'Deployment of the pipeline to Amazon Web Service EC2 production instance.'
             }
         }
     }
