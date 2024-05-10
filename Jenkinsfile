@@ -13,13 +13,15 @@ pipeline {
             post {
                 success {
                     emailext attachLog: true,
-                        subject: 'Completed both the tests',
-                        body: 'Completed both the tests',
+                        subject: 'Testing Success: Build #${BUILD_NUMBER}',
+                        from: 'admin@jenkin.com',
+                        body: 'The Build #${BUILD_NUMBER} was successful Tested',
                         to: 'antonyr1r2@gmail.com'
                 }
                 failure {
                     emailext attachLog: true,
-                        subject: 'Failed both the tests',
+                        from: 'admin@jenkin.com',
+                        subject: 'Testing Failed: Build #${BUILD_NUMBER}',
                         body: 'Failed both the tests',
                         to: 'antonyr1r2@gmail.com'
                 }
@@ -39,12 +41,14 @@ pipeline {
                 success {
                     emailext attachLog: true,
                         subject: 'Completed security scan',
+                        from: 'admin@jenkin.com',
                         body: 'Completed security scan',
                         to: 'antonyr1r2@gmail.com'
                 }
                 failure {
                     emailext attachLog: true,
                         subject: 'Failed security scan',
+                        from: 'admin@jenkin.com',
                         body: 'Failed security scan',
                         to: 'antonyr1r2@gmail.com'
                 }
@@ -68,12 +72,14 @@ pipeline {
                 success {
                     emailext attachLog: true,
                         subject: 'Pipeline success',
+                        from: 'admin@jenkin.com',
                         body: 'Pipeline has been created successfully!',
                         to: 'antonyr1r2@gmail.com'
                 }
                 failure {
                     emailext attachLog: true,
                         subject: 'Pipeline failed',
+                        from: 'admin@jenkin.com',
                         body: 'The pipeline has failed. Please take necessary actions.',
                         to: 'antonyr1r2@gmail.com'
                 }
