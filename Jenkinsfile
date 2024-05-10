@@ -15,14 +15,14 @@ pipeline {
                     emailext attachLog: true,
                         subject: 'Testing Success: Build #${BUILD_NUMBER}',
                         from: 'admin@jenkin.com',
-                        body: 'The Build #${BUILD_NUMBER} was successful Tested',
+                        body: 'The Build #${BUILD_NUMBER} was successfully Tested using the Citrus and Selenium',
                         to: 'antonyr1r2@gmail.com'
                 }
                 failure {
                     emailext attachLog: true,
                         from: 'admin@jenkin.com',
                         subject: 'Testing Failed: Build #${BUILD_NUMBER}',
-                        body: 'Failed both the tests',
+                        body: 'The Build #${BUILD_NUMBER} has failed in Testing using the Citrus and Selenium',
                         to: 'antonyr1r2@gmail.com'
                 }
             }
@@ -40,16 +40,16 @@ pipeline {
             post {
                 success {
                     emailext attachLog: true,
-                        subject: 'Completed security scan',
+                        subject: 'Scanning Success: Build #${BUILD_NUMBER}',
                         from: 'admin@jenkin.com',
-                        body: 'Completed security scan',
+                        body: 'The Build #${BUILD_NUMBER} has been successfully scanned using OWASP ZAP',
                         to: 'antonyr1r2@gmail.com'
                 }
                 failure {
                     emailext attachLog: true,
-                        subject: 'Failed security scan',
+                        subject: 'Scanning Failed: Build #${BUILD_NUMBER}',
                         from: 'admin@jenkin.com',
-                        body: 'Failed security scan',
+                        body: 'The Build #${BUILD_NUMBER} has been failed in the scanning using OWASP ZAP',
                         to: 'antonyr1r2@gmail.com'
                 }
             }
@@ -71,16 +71,16 @@ pipeline {
             post {
                 success {
                     emailext attachLog: true,
-                        subject: 'Pipeline success',
+                        subject: 'Deployment Success: Build #${BUILD_NUMBER}',
                         from: 'admin@jenkin.com',
-                        body: 'Pipeline has been created successfully!',
+                        body: 'The Build #${BUILD_NUMBER} has been deployed to Amazon Web Service EC2 production instance',
                         to: 'antonyr1r2@gmail.com'
                 }
                 failure {
                     emailext attachLog: true,
-                        subject: 'Pipeline failed',
+                        subject: 'Deployment Failed: Build #${BUILD_NUMBER}',
                         from: 'admin@jenkin.com',
-                        body: 'The pipeline has failed. Please take necessary actions.',
+                        body: 'The Build #${BUILD_NUMBER} has been failed in Deployment',
                         to: 'antonyr1r2@gmail.com'
                 }
             }
