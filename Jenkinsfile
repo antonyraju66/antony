@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the pipeline using a build automation tool called Maven.'
+                echo 'creating the pipeline using the Maven build automation software.'
             }
         }
         stage('Unit and Integration Tests') {
