@@ -40,7 +40,7 @@ pipeline {
             post {
                 success {
                     emailext attachLog: true,
-                        subject: 'Scanning Successfor Build #${BUILD_NUMBER}',
+                        subject: 'Scanning Success for Build #${BUILD_NUMBER}',
                         from: 'antonyr1r2@gmail.com',
                         body: 'The Build #${BUILD_NUMBER} has been successfully scanned using OWASP ZAP',
                         to: 'antonyr1r2@gmail.com'
