@@ -22,7 +22,7 @@ pipeline {
                     emailext attachLog: true,
                         from: 'antonyr1r2@gmail.com',
                         subject: 'Testing Failed for Build #${BUILD_NUMBER}',
-                        body: 'The Build #${BUILD_NUMBER} has failed in Testing using the Citrus and Selenium',
+                        body: 'The Build #${BUILD_NUMBER} has failed in Testing using the Citrus and Selenium1',
                         to: 'antonyr1r2@gmail.com'
                 }
             }
